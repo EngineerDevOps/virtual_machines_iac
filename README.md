@@ -6,7 +6,6 @@ Change VCenter Configuration based on your requirements: /vars/vm_vars.yml
 
 Install VMs:
 ./deploy_vm.sh
-```
 
 Remove VMs:
 ./remove_vm.sh
