@@ -15,7 +15,7 @@ function deploy_vm() {
     ansible-playbook $project_dir/deploy_vm.yml
     if [ $? -eq 0 ];
     then
-        echo "Deploy VMs completed successfully!"
+        echo "VMs deployment was successful!"
         echo "-------------------------------------------------------------------"
     else
         echo "Deploy failed!"
@@ -29,7 +29,7 @@ function create_sshkeygen() {
     then
         ssh-keygen -q -t rsa -N '' -f ~/.ssh/id_rsa <<<y >/dev/null 2>&1
     else
-        echo "RSA Key already has been"
+        echo "The SSH key is already available!"
         echo "-------------------------------------------------------------------"
     fi
 }
@@ -42,9 +42,9 @@ function ssh_copy() {
         sshpass -p $passwd ssh-copy-id $user@$host > /dev/null 2>&1
         if [ $? -eq 0 ];
         then
-            echo "IP Address: $host -- Copy SSH key completed successfully!"
+            echo "IP Address: $host -- SSH key transferred successfully!"
         else
-            echo "IP Address: $host -- Copy SSH key failed!"
+            echo "IP Address: $host -- SSH key transfer failed!"
         fi
     done
 }
