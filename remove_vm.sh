@@ -9,9 +9,9 @@ function remove_vm() {
     ansible-playbook $project_dir/remove_vm.yml
     if [ $? -eq 0 ];
     then
-        echo "Remove VMs from vCenter completed successfully!"
+        echo "The removal of the VMs was successful !"
     else
-        echo "Remove VMs failed!"
+        echo "The deletion of the VMs failed!"
         exit 1
     fi
 }
