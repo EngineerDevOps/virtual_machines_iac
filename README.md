@@ -7,8 +7,8 @@ Add new users and packages for VMs: /vars/os_vars.yml
 Change VCenter Configuration based on your requirements: /vars/vm_vars.yml
 
 Install VMs:
-./deploy_vm.sh
+./scripts/deploy_vm.sh
 
 Remove VMs:
-./remove_vm.sh
+./scripts/remove_vm.sh
 ```
